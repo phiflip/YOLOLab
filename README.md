@@ -46,15 +46,3 @@ python yolov8_test.py
 ## Test Dataset
 
 A test dataset is included in the `data/test` directory. This can be used to verify the functionality of YOLOv8 after the installation is complete.
-
-## Contributing
-
-Contributions to this project are welcome! If you have improvements or additional features you would like to add, please feel free to create a pull request or open an issue.
-
-## License
-
-This project is licensed under the MIT License. For more details, see the [LICENSE](LICENSE) file.
-
-## Contact
-
-For more information or support, please contact [Your Name] at [Your Email Address].
