@@ -47,7 +47,8 @@ python yolov8_test.py
 ## Most important command line interface (CLI) commands
 ### run an pretrained yolo object detector on your webcam
 ```bash
-yolo predict model=yolov8n.pt source=0 show=True```
+yolo predict model=yolov8n.pt source=0 show=True
+```
 ## Test Dataset
 
 A test dataset is included in the `data/test` directory. This can be used to verify the functionality of YOLOv8 after the installation is complete.
