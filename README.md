@@ -7,18 +7,17 @@ Welcome to the YOLOv8Lab repository, a dedicated platform for setting up and usi
 
 This project assumes that Anaconda and Spyder are installed on your Windows system. Follow the steps below to set up your environment.
 
-
 ### Prerequisites
 
 - Anaconda: Download and install Anaconda from the [official website](https://www.anaconda.com/products/individual) ([Installing on Linux](https://docs.anaconda.com/free/anaconda/install/linux/), [Installing on macOS](https://docs.anaconda.com/free/anaconda/install/mac-os/).)
 - Python 3.9
 
-### Environment Setup
+### Directory structure
 
 1. **Create the yolov8 project folder**
 ```bash
 C:/
-├─User
+├─ Users
 │   ├─ UserName
 │   │   ├─ yolov8                  
 │   │   │   ├─ labeling/        
@@ -29,12 +28,14 @@ C:/
 │   └─ ...
 └──...
 ```
-3. **Create a Conda Environment:**
+### Environment Setup (via Anaconda Prompt)
+
+2. **Create a new conda environment (in the windows search bar type "Anaconda Prompt"):**
    ```bash
    conda create --name yolov8 python=3.9 spyder=5
    ```
 
-4. **Activate the Environment:**
+3. **Activate the environment:**
    ```bash
    conda activate yolov8
    ```
@@ -48,20 +49,24 @@ C:/
    ```bash
    spyder
    ```
-7. **…and check your installation by opening and running the yolov8_test.py in spyder:**
+7. **… and check your installation by opening and running the yolov8_test.py in spyder:**
    
    [Download yolov8_test.py](https://github.com/phiflip/YOLOv8Lab/blob/main/scripts/yolov8_test.py)
 
+### Additional Tools
+
+1. **Install labelImg for image annotation using the same activated yolov8 environment:**
+   ```bash
+   conda install -c conda-forge labelimg
+   ```
+2. **Start the labeling software:**
+   ```bash
+   labelImg
+   ```
 
 ## Usage
 
-In this repository, you will find various CLI snippets that help perform basic tasks such as loading and running test datasets.
-
-### Sample Snippet
-
-```bash
-python yolov8_test.py
-```
+In this repository, you will find various CLI snippets that help perform basic tasks such as trainings and predictions on datasets.
 
 ## Most important command line interface (CLI) commands
 ### run an pretrained yolo object detector on your webcam
@@ -70,4 +75,4 @@ yolo predict model=yolov8n.pt source=0 show=True
 ```
 ## Test Dataset
 
-A test dataset is included in the `data/test` directory. This can be used to verify the functionality of YOLOv8 after the installation is complete.
+A test dataset is included in the `data/test` directory. This can be used to verify the functionality of YOLOv8 in case theres no custom dataset available.
