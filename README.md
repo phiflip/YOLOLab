@@ -74,7 +74,7 @@ C:/
    ```bash
    labelimg C:\Users\UserName\yolov8\labeling C:\Users\UserName\yolov8\labeling\predefined_classes.txt 
    ```
-### run an pretrained yolo object detector on your webcam
+### run a pretrained yolo object detector on your webcam
    ```bash
    yolo predict model=yolov8n.pt source=0 show=True
    ```
