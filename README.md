@@ -1,42 +1,56 @@
 # YOLOv8Lab
 <img src="https://github.com/phiflip/YOLOv8Lab/blob/main/icons/YOLOv8Lab_final_icon_nobackgorund_highRes.png" width="200" alt="ModVegePy main logo type">
 </div>
-Welcome to the YOLOv8Lab repository, a dedicated resource center for setting up and using YOLOv8 for object detection tasks in educational settings. This repository serves as a hub for individuals interested in configuring and deploying YOLOv8 for custom object detection.
+Welcome to the YOLOv8Lab repository, a dedicated platform for setting up and using YOLOv8 for object detection tasks in educational settings. This repository serves as a hub for individuals interested in configuring and deploying YOLOv8 for custom object detection.
 
 ## Installation
 
 This project assumes that Anaconda and Spyder are installed on your Windows system. Follow the steps below to set up your environment.
-[Installing on Linux](https://docs.anaconda.com/free/anaconda/install/linux/) [Installing on macOS](https://docs.anaconda.com/free/anaconda/install/mac-os/)
+
 
 ### Prerequisites
 
-- Anaconda: Download and install Anaconda from the [official website](https://www.anaconda.com/products/individual).
+- Anaconda: Download and install Anaconda from the [official website](https://www.anaconda.com/products/individual) ([Installing on Linux](https://docs.anaconda.com/free/anaconda/install/linux/), [Installing on macOS](https://docs.anaconda.com/free/anaconda/install/mac-os/).)
 - Python 3.9
 
 ### Environment Setup
 
-1. **Create a Conda Environment:**
+1. **Create the yolov8 project folder**
+```bash
+C:/
+├─User
+│   ├─ UserName
+│   │   ├─ yolov8                  
+│   │   │   ├─ labeling/        
+│   │   │   ├─ train/
+│   │   │   ├─ test/     
+│   │   │   └─ valid/
+│   │   └─ ...             
+│   └─ ...
+└──...
+```
+3. **Create a Conda Environment:**
    ```bash
    conda create --name yolov8 python=3.9 spyder=5
    ```
 
-2. **Activate the Environment:**
+4. **Activate the Environment:**
    ```bash
    conda activate yolov8
    ```
 
-3. **Install Required Packages:**
+5. **Install Required Packages:**
    ```bash
    pip install ultralytics
    ```
 
-4. **Launch Spyder within the new environment:**
+6. **Launch Spyder within the new environment:**
    ```bash
    spyder
    ```
-5. **…and check your installation by opening and running the yolov8_test.py in spyder:**
-
-[Download yolov8_test.py](https://github.com/phiflip/YOLOv8Lab/blob/main/scripts/yolov8_test.py)
+7. **…and check your installation by opening and running the yolov8_test.py in spyder:**
+   
+   [Download yolov8_test.py](https://github.com/phiflip/YOLOv8Lab/blob/main/scripts/yolov8_test.py)
 
 
 ## Usage
