@@ -67,6 +67,3 @@ C:/
    ```bash
    labelImg
    ```
-
-## Test Dataset
-A test dataset is included in the `dataset/` directory. This can be used to verify the functionality of YOLOv8 in case theres no custom dataset available.
