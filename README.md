@@ -2,6 +2,10 @@
 <img src="https://github.com/phiflip/YOLOv8Lab/blob/main/icons/YOLOv8Lab_final_icon_nobackgorund_highRes.png" width="200" alt="ModVegePy main logo type">
 </div>
 Welcome to the YOLOv8Lab repository, a dedicated platform for setting up and using YOLOv8 for object detection tasks in educational settings. This repository serves as a hub for individuals interested in configuring and deploying YOLOv8 for custom object detection.
+<br />
+<br />
+This repository and code is based on the YOLOv8 project by: Jocher, G., Chaurasia, A., & Qiu, J. (2023). Ultralytics YOLO (Version 8.0.0)
+[Computer software]. https://github.com/ultralytics/ultralytics
 
 ## Installation
 
@@ -64,15 +68,15 @@ C:/
    labelImg
    ```
 
-## Usage
-
-In this repository, you will find various CLI snippets that help perform basic tasks such as trainings and predictions on datasets.
-
 ## Most important command line interface (CLI) commands
-### run an pretrained yolo object detector on your webcam
-```bash
-yolo predict model=yolov8n.pt source=0 show=True
-```
-## Test Dataset
 
+### run labelImg in the correct folder
+   ```bash
+   labelimg C:\Users\UserName\yolov8\labeling C:\Users\UserName\yolov8\labeling\predefined_classes.txt 
+   ```
+### run an pretrained yolo object detector on your webcam
+   ```bash
+   yolo predict model=yolov8n.pt source=0 show=True
+   ```
+## Test Dataset
 A test dataset is included in the `data/test` directory. This can be used to verify the functionality of YOLOv8 in case theres no custom dataset available.
