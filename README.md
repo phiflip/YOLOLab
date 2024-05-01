@@ -68,15 +68,5 @@ C:/
    labelImg
    ```
 
-## Most important command line interface (CLI) commands
-
-### run labelImg in the correct folder
-   ```bash
-   labelimg C:\Users\UserName\yolov8\labeling C:\Users\UserName\yolov8\labeling\predefined_classes.txt 
-   ```
-### run a pretrained yolo object detector on your webcam
-   ```bash
-   yolo predict model=yolov8n.pt source=0 show=True
-   ```
 ## Test Dataset
 A test dataset is included in the `dataset/` directory. This can be used to verify the functionality of YOLOv8 in case theres no custom dataset available.
