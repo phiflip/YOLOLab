@@ -33,6 +33,11 @@ This project assumes that Anaconda and Spyder are installed on your Windows syst
    ```bash
    spyder
    ```
+5. **…and check by opening and running the yolov8_test.py if it doesn’t
+create any further error messages.**
+
+[Download yolov8_test.py](https://github.com/phiflip/YOLOv8Lab/blob/main/scripts/yolov8_test.py)
+
 
 ## Usage
 
