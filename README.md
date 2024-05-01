@@ -14,7 +14,7 @@ This project assumes that Anaconda and Spyder are installed on your Windows syst
 ### Prerequisites
 
 - Anaconda: Download and install Anaconda from the [official website](https://www.anaconda.com/products/individual) ([Installing on Linux](https://docs.anaconda.com/free/anaconda/install/linux/), [Installing on macOS](https://docs.anaconda.com/free/anaconda/install/mac-os/).)
-- Python 3.9
+- Python >= 3.9 (comes with Anaconda)
 
 ### Directory structure
 
