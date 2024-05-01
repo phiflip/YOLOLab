@@ -6,6 +6,7 @@ Welcome to the YOLOv8Lab repository, a dedicated resource center for setting up 
 ## Installation
 
 This project assumes that Anaconda and Spyder are installed on your Windows system. Follow the steps below to set up your environment.
+[Installing on Linux](https://docs.anaconda.com/free/anaconda/install/linux/) [Installing on macOS](https://docs.anaconda.com/free/anaconda/install/mac-os/)
 
 ### Prerequisites
 
@@ -33,8 +34,7 @@ This project assumes that Anaconda and Spyder are installed on your Windows syst
    ```bash
    spyder
    ```
-5. **…and check by opening and running the yolov8_test.py if it doesn’t
-create any further error messages.**
+5. **…and check your installation by opening and running the yolov8_test.py in spyder:**
 
 [Download yolov8_test.py](https://github.com/phiflip/YOLOv8Lab/blob/main/scripts/yolov8_test.py)
 
