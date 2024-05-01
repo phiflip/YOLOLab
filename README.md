@@ -79,4 +79,4 @@ C:/
    yolo predict model=yolov8n.pt source=0 show=True
    ```
 ## Test Dataset
-A test dataset is included in the `data/test` directory. This can be used to verify the functionality of YOLOv8 in case theres no custom dataset available.
+A test dataset is included in the `dataset/` directory. This can be used to verify the functionality of YOLOv8 in case theres no custom dataset available.
