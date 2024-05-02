@@ -73,6 +73,4 @@ C:/
    ```bash
    labelImg
    ```
-<p align="center">
-  <img src="https://github.com/phiflip/YOLOv8Lab/blob/main/icons/labelimg_startup.png" width="500" alt="LabelImg">
-</p>
+   <img src="https://github.com/phiflip/YOLOv8Lab/blob/main/icons/labelimg_startup.png" width="500" alt="LabelImg">
