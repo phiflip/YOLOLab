@@ -1,6 +1,6 @@
 # YOLOv8Lab
-<img src="https://github.com/phiflip/YOLOv8Lab/blob/main/icons/YOLOv8Lab_final_icon_nobackgorund_highRes.png" width="200" alt="ModVegePy main logo type">
-</div>
+<img src="https://github.com/phiflip/YOLOv8Lab/blob/main/icons/YOLOv8Lab_final_icon_nobackgorund_highRes.png" width="200" alt="YOLOv8Lab main logo type">
+
 Welcome to the YOLOv8Lab repository, a dedicated platform for setting up and using YOLOv8 for object detection tasks in educational settings.
 <br />
 <br />
@@ -71,3 +71,6 @@ C:/
    ```bash
    labelImg
    ```
+<p align="center">
+  <img src="https://github.com/phiflip/YOLOv8Lab/blob/main/icons/labelimg_startup.png" width="500" alt="LabelImg">
+</p>
