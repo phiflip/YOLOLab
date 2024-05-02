@@ -39,7 +39,7 @@ C:/
 ### Environment Setup (via Anaconda Prompt)
 
 2. **Create a new conda environment (in the windows search bar type "Anaconda Prompt"):**
-    <img src="https://github.com/phiflip/YOLOv8Lab/blob/main/icons/anaconda_prompt_snippet.PNG" width="500" alt="Prompt">
+   <kbd> <img src="https://github.com/phiflip/YOLOv8Lab/blob/main/icons/anaconda_prompt_snippet.PNG" width="500" alt="Prompt"></kbd>
 
    ```bash
    conda create --name yolov8 python=3.9 spyder=5
@@ -73,4 +73,4 @@ C:/
    ```bash
    labelImg
    ```
-   <img src="https://github.com/phiflip/YOLOv8Lab/blob/main/icons/labelimg_startup.png" width="500" alt="LabelImg">
+   <kbd><img src="https://github.com/phiflip/YOLOv8Lab/blob/main/icons/labelimg_startup.png" width="500"  border="1px solid red" alt="LabelImg"></kbd>
