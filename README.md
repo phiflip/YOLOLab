@@ -13,7 +13,11 @@ This project assumes that Anaconda and Spyder are installed on your Windows syst
 
 ### Prerequisites
 
-- Anaconda: Download and install Anaconda from the [official website](https://www.anaconda.com/products/individual) ([Installing on Linux](https://docs.anaconda.com/free/anaconda/install/linux/), [Installing on macOS](https://docs.anaconda.com/free/anaconda/install/mac-os/).)
+- Anaconda: Download and install Anaconda from the [official website](https://www.anaconda.com/products/individual).
+  See installation guides for different operating systems:
+   - [Installing on Windows](https://docs.anaconda.com/free/anaconda/install/windows/),
+   - [Installing on Linux](https://docs.anaconda.com/free/anaconda/install/linux/),
+   - [Installing on macOS](https://docs.anaconda.com/free/anaconda/install/mac-os/).
 - Python >= 3.9 (comes with Anaconda)
 
 ### Directory structure
@@ -53,7 +57,7 @@ C:/
    ```bash
    spyder
    ```
-7. **… and check your installation by opening and running the yolov8_test.py in spyder:**
+7. **… and check your installation by opening and running the yolov8_test.py in Spyder:**
    
    [Download yolov8_test.py](https://github.com/phiflip/YOLOv8Lab/blob/main/scripts/yolov8_test.py)
 
