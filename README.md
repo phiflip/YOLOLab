@@ -39,6 +39,8 @@ C:/
 ### Environment Setup (via Anaconda Prompt)
 
 2. **Create a new conda environment (in the windows search bar type "Anaconda Prompt"):**
+    <img src="https://github.com/phiflip/YOLOv8Lab/blob/main/icons/anaconda_prompt_snippet.PNG" width="500" alt="Prompt">
+
    ```bash
    conda create --name yolov8 python=3.9 spyder=5
    ```
