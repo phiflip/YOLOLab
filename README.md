@@ -62,6 +62,17 @@ C:/
 7. **… and check your installation by opening and running the yolov8_test.py in Spyder:**
    
    [Download yolov8_test.py](https://github.com/phiflip/YOLOv8Lab/blob/main/scripts/yolov8_test.py)
+8. **... or by typing the following commads in your Command Line Interface (CLI):**
+    #### Predict on an image
+    ```bash
+    yolo predict model=yolov8n.pt source='https://ultralytics.com/images/bus.jpg'
+    ```
+
+    #### Run a pretrained yolo object detector on your webcam
+   ```bash
+   yolo predict model=yolov8n.pt source=0 show=True
+   ```
+   
 
 ## Labeling
 ### Additional Tools
@@ -72,9 +83,23 @@ C:/
    ```
 2. **Start the labeling software:**
    ```bash
-   labelImg
+   labelimg 
    ```
-   <kbd><img src="https://github.com/phiflip/YOLOv8Lab/blob/main/icons/labelimg_startup.png" width="500"  border="1px solid red" alt="LabelImg"></kbd>
+3. **... in the correct folder (labelImg [path to images] [path to predefined_classes.txt file]):**
+   ```bash
+   labelimg C:\Users\UserName\yolov8\labeling C:\Users\UserName\yolov8\labeling\predefined_classes.txt 
+   ```
 
+## YOLOv8
+   
+   <kbd><img src="https://github.com/phiflip/YOLOv8Lab/blob/main/icons/labelimg_startup.png" width="500"  border="1px solid red" alt="LabelImg"></kbd>
+  
 
 ## Training
+
+
+
+
+
+
+
