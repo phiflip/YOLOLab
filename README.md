@@ -63,6 +63,7 @@ C:/
    
    [Download yolov8_test.py](https://github.com/phiflip/YOLOv8Lab/blob/main/scripts/yolov8_test.py)
 
+## Labeling
 ### Additional Tools
 
 1. **Install labelImg for image annotation using the same activated yolov8 environment:**
@@ -74,3 +75,6 @@ C:/
    labelImg
    ```
    <kbd><img src="https://github.com/phiflip/YOLOv8Lab/blob/main/icons/labelimg_startup.png" width="500"  border="1px solid red" alt="LabelImg"></kbd>
+
+
+## Training
