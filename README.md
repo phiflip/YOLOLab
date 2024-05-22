@@ -7,6 +7,16 @@ Welcome to the YOLOv8Lab repository, a dedicated platform for setting up and usi
 This repository and code is based on the YOLOv8 project by: Jocher, G., Chaurasia, A., & Qiu, J. (2023). Ultralytics YOLO (Version 8.0.0)
 [Computer software]. https://github.com/ultralytics/ultralytics
 
+# Table of Contents
+
+1. [Installation](#installation)
+2. [Labeling](#labeling)
+3. [Training](#training)
+4. [Predictions](#predictions)
+
+
+
+
 ## Installation
 
 This project assumes that Anaconda and Spyder are installed on your Windows system. Follow the steps below to set up your environment.
