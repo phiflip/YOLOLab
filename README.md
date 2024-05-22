@@ -108,7 +108,7 @@ C:/
 
 
 ```bash
-yolo task=detect mode=train model=yolov8n.pt imgsz=800 data=path/to/boars.yaml epochs=200 batch=8 project=/path/to/your/project/training_runs/ name=yolov8m_imgsz800 device="cpu"
+yolo task=detect mode=train model=yolov8n.pt imgsz=800 data=path/to/boars.yaml epochs=200 batch=8 project=/path/to/your/project/training_runs/ name=yolov8n_imgsz800 device="cpu"
 ```
 
 ### ... or using a python environment
@@ -127,7 +127,7 @@ model.train(data="path/to/yolov8/boars.yaml",
             imgsz=800,
             batch=8,
             project = "path/to/yolov8/training_runs/",
-            name=yolov8m_imgsz800
+            name=yolov8n_imgsz800
             device="cpu")  # 0 for GPU (check pytorch installation hints) or "cpu"
 
 ```
