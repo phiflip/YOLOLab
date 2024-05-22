@@ -144,3 +144,36 @@ test:  path\to\yolov8\test
 nc: 2
 names: ['boar','human']
 ```
+## Predictions
+
+```bash
+yolo predict model= .\training_runs\yolov8m_imgsz800\weights\best.pt source=.\test project=predictions name=yolov8m_imgsz800 conf=0.2 imgsz=800
+```
+
+```python
+from ultralytics import YOLO
+import cv2
+from matplotlib import pylab as plt
+
+# Load a trained model
+model = YOLO("path/to/yolov8/training_runs/yolov8m_imgsz800/weights/best.pt")
+
+# Use the model (predict on an image)    
+results = model("path/to/yolov8/test",
+                project = "path/to/yolov8/predictions",
+                name = "yolov8m_imgsz800",
+                show=True, 
+                show_labels=False, 
+                conf=0.2,
+                imgsz=800,
+                classes=None,
+                save=True
+                ) 
+
+#%%     
+# Plot the results (within matplotlib)
+res_plotted = results[0].plot() # results[0]: show the first image
+res_plotted_rgb=cv2.cvtColor(res_plotted, cv2.COLOR_BGR2RGB) 
+plt.imshow(res_plotted_rgb)
+
+```
