@@ -94,15 +94,33 @@ C:/
 
 ## Training
 
-### Start a Training on your local machine directly in the **CLI**
+### Start a Training on your local machine directly in the **CLI** ...
 
 
 ```bash
-yolo task=detect mode=train model=yolov8n.pt imgsz=800 data=path/to/eberstall.yaml epochs=200 batch=8 project=/path/to/your/project/training_runs/ name=yolov8m_imgsz800 device=(0,1)
+yolo task=detect mode=train model=yolov8n.pt imgsz=800 data=path/to/boars.yaml epochs=200 batch=8 project=/path/to/your/project/training_runs/ name=yolov8m_imgsz800 device=(0,1)
 ```
 
-- `task=detect`: Specifies the task that YOLO should perform. In this case, it is object detection (`detect`).
-- `mode=train`: Sets the mode to training (`train`).
+### ... or using a Python environment
+```python
+from ultralytics import YOLO
+import os
+
+# change the working directory so that the training results are saved to the correct folder.
+os.chdir("path/to/yolov8/dataset/training_runs/")
+# Load a pretrained model
+model = YOLO("yolov8n.pt")
+
+# train the model (transfer learning)
+model.train(data="path/to/yolov8/dataset/boars.yaml",
+            epochs=200,
+            imgsz=800,
+            batch=8,
+            project = "path/to/yolov8/dataset/training_runs/"
+            name=yolov8m_imgsz800
+            device="cpu")  # 0 for GPU (check pytorch installation hints) or "cpu"
+
+```
 - `model=yolov8n.pt`: Indicates the model to be used. Here, the YOLOv8 Nano model (`yolov8n.pt`) is used.
 - `imgsz=800`: Determines the size of the input images in pixels. In this case, the image size is 800x800 pixels (default: 640).
 - `data=path/to/eberstall.yaml`: Specifies the path to the data file that defines the training and validation data.
@@ -113,13 +131,3 @@ yolo task=detect mode=train model=yolov8n.pt imgsz=800 data=path/to/eberstall.ya
 - `device=(0,1)`: Specifies the GPU devices to be used for training. Here, GPUs 0 and 1 are used (device='cpu').
 
 Check [here](https://docs.ultralytics.com/modes/train/#train-settings) for additional train settings and hyperparameters
-
-### or using a Python environment
-```python
-from ultralytics import YOLO
-# Load a model
-model = YOLO("path/to/last.pt")  # load a partially trained model
-
-# Resume training
-results = model.train(resume=True)
-```
