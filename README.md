@@ -101,7 +101,7 @@ C:/
 yolo task=detect mode=train model=yolov8n.pt imgsz=800 data=path/to/boars.yaml epochs=200 batch=8 project=/path/to/your/project/training_runs/ name=yolov8m_imgsz800 device=(0,1)
 ```
 
-### ... or using a Python environment
+### ... or using a python environment
 ```python
 from ultralytics import YOLO
 import os
@@ -112,18 +112,18 @@ os.chdir("path/to/yolov8/dataset/training_runs/")
 model = YOLO("yolov8n.pt")
 
 # train the model (transfer learning)
-model.train(data="path/to/yolov8/dataset/boars.yaml",
+model.train(data="path/to/yolov8/boars.yaml",
             epochs=200,
             imgsz=800,
             batch=8,
-            project = "path/to/yolov8/dataset/training_runs/"
+            project = "path/to/yolov8/training_runs/",
             name=yolov8m_imgsz800
             device="cpu")  # 0 for GPU (check pytorch installation hints) or "cpu"
 
 ```
 - `model=yolov8n.pt`: Indicates the model to be used. Here, the YOLOv8 Nano model (`yolov8n.pt`) is used.
 - `imgsz=800`: Determines the size of the input images in pixels. In this case, the image size is 800x800 pixels (default: 640).
-- `data=path/to/eberstall.yaml`: Specifies the path to the data file that defines the training and validation data.
+- `data=path/to/boars.yaml`: Specifies the path to the data file that defines the training and validation data.
 - `epochs=200`: Sets the number of training epochs. Here, it is 200 epochs.
 - `batch=8`: Determines the batch size, i.e., the number of images processed simultaneously. Here, it is 8 (default 16).
 - `project=/path/to/your/project/training_runs/`: Indicates the project directory where the training runs will be saved.
@@ -131,3 +131,16 @@ model.train(data="path/to/yolov8/dataset/boars.yaml",
 - `device=(0,1)`: Specifies the GPU devices to be used for training. Here, GPUs 0 and 1 are used (device='cpu').
 
 Check [here](https://docs.ultralytics.com/modes/train/#train-settings) for additional train settings and hyperparameters
+### Example boars.yaml file
+
+```yaml
+# Contents inside the .yaml file
+
+train: path\to\yolov8\train
+val:   path\to\yolov8\valid
+test:  path\to\yolov8\train\test
+
+# total number of classes
+nc: 2
+names: ['boar','human']
+```
