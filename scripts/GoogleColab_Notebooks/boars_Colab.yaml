@@ -1,7 +1,7 @@
 ## Contents inside the .yaml file
 
-train: /content/gdrive/My Drive/Colab Notebooks/train
-val: /content/gdrive/My Drive/Colab Notebooks/valid
+train: /content/gdrive/My Drive/Colab Notebooks/datasets/boars/train
+val: /content/gdrive/My Drive/Colab Notebooks/datasets/boars/valid
 
 # total nb of classes
 nc: 2 
