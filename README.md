@@ -88,18 +88,38 @@ C:/
 3. **... in the correct folder (labelImg [path to images] [path to predefined_classes.txt file]):**
    ```bash
    labelimg C:\Users\UserName\yolov8\labeling C:\Users\UserName\yolov8\labeling\predefined_classes.txt 
-   ```
-
-## YOLOv8
-   
+   ```   
    <kbd><img src="https://github.com/phiflip/YOLOv8Lab/blob/main/icons/labelimg_startup.png" width="500"  border="1px solid red" alt="LabelImg"></kbd>
   
 
 ## Training
 
+### Start a Training on your local machine directly in the **CLI**
 
 
+```bash
+yolo task=detect mode=train model=yolov8n.pt imgsz=800 data=path/to/eberstall.yaml epochs=200 batch=8 project=/path/to/your/project/training_runs/ name=yolov8m_imgsz800 device=(0,1)
+```
 
+- `task=detect`: Specifies the task that YOLO should perform. In this case, it is object detection (`detect`).
+- `mode=train`: Sets the mode to training (`train`).
+- `model=yolov8n.pt`: Indicates the model to be used. Here, the YOLOv8 Nano model (`yolov8n.pt`) is used.
+- `imgsz=800`: Determines the size of the input images in pixels. In this case, the image size is 800x800 pixels (default: 640).
+- `data=path/to/eberstall.yaml`: Specifies the path to the data file that defines the training and validation data.
+- `epochs=200`: Sets the number of training epochs. Here, it is 200 epochs.
+- `batch=8`: Determines the batch size, i.e., the number of images processed simultaneously. Here, it is 8 (default 16).
+- `project=/path/to/your/project/training_runs/`: Indicates the project directory where the training runs will be saved.
+- `name=yolov8n_imgsz800`: Sets the name of the training run. This helps distinguish between different runs.
+- `device=(0,1)`: Specifies the GPU devices to be used for training. Here, GPUs 0 and 1 are used (device='cpu').
 
+Check [here](https://docs.ultralytics.com/modes/train/#train-settings) for additional train settings and hyperparameters
 
+### or using a Python environment
+```python
+from ultralytics import YOLO
+# Load a model
+model = YOLO("path/to/last.pt")  # load a partially trained model
 
+# Resume training
+results = model.train(resume=True)
+```
