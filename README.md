@@ -138,7 +138,7 @@ Check [here](https://docs.ultralytics.com/modes/train/#train-settings) for addit
 
 train: path\to\yolov8\train
 val:   path\to\yolov8\valid
-test:  path\to\yolov8\train\test
+test:  path\to\yolov8\test
 
 # total number of classes
 nc: 2
