@@ -157,7 +157,7 @@ names: ['boar','human']
 ## Predictions
 
 ```bash
-yolo predict model= .\training_runs\yolov8m_imgsz800\weights\best.pt source=.\test project=predictions name=yolov8m_imgsz800 conf=0.2 imgsz=800
+yolo predict model= .\training_runs\yolov8n_imgsz800\weights\best.pt source=.\test project=predictions name=yolov8n_imgsz800 conf=0.2 imgsz=800
 ```
 
 ```python
