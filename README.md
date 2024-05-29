@@ -13,7 +13,7 @@ This repository and code is based on the YOLOv8 project by: Jocher, G., Chaurasi
 2. [Labeling](#labeling)
 3. [Training](#training)
 4. [Predictions](#predictions)
-
+5. [Tracking](#tracking)
 
 
 
@@ -187,3 +187,8 @@ res_plotted_rgb=cv2.cvtColor(res_plotted, cv2.COLOR_BGR2RGB)
 plt.imshow(res_plotted_rgb)
 
 ```
+## Tracking
+```bash
+yolo track model=path\to\weights\best.pt project=path\to\trackings\ name=yolov8n_800_botsort source="path\to\test\" tracker=botsort.yaml
+```
+[Here](https://github.com/phiflip/YOLOv8Lab/blob/main/scripts/tracking/) you can find the .yaml files for your tracker, as well as an additional script if you want to draw lines for your tracked paths.
