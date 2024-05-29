@@ -6,12 +6,12 @@ import numpy as np
 from ultralytics import YOLO
 
 # Load the YOLOv8 model
-model = YOLO('G:/SUISAG/dataset/eberstall/runs/20231213_yolov8l_imgsz800/weights/best.pt')
+model = YOLO('path/to/weights/best.pt')
 
 
 
 # Open the video file
-video_path = "G:/SUISAG/dataset/eberstall/test/TestVideos/NVR-2-Bucht341-Futterstation-2.mp4"
+video_path = "path/to/test/"
 cap = cv2.VideoCapture(video_path)
 cv2.namedWindow("YOLOv8 Tracking", cv2.WINDOW_NORMAL)
 
@@ -25,7 +25,7 @@ while cap.isOpened():
 
     if success:
         # Run YOLOv8 tracking on the frame, persisting tracks between frames
-        results = model.track(frame, persist=True, tracker='G:/SUISAG/dataset/eberstall/bytetrack_custom.yaml')
+        results = model.track(frame, persist=True, tracker='path/to/bytetrack_custom.yaml')
         # print(results)
         # Get the boxes and track IDs
         boxes = results[0].boxes.xywh.cpu()
