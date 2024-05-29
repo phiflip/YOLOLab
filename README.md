@@ -197,4 +197,4 @@ yolo detect val model=path\to\weights\best.pt data=path\to\yourFile.yaml
 ```bash
 yolo track model=path\to\weights\best.pt project=path\to\trackings\ name=yolov8n_800_botsort source="path\to\test\" tracker=botsort.yaml
 ```
-[Here](https://github.com/phiflip/YOLOv8Lab/blob/main/scripts/tracking/) you can find the .yaml files for your tracker, as well as an additional script if you want to draw lines for your tracked paths.
+[Here](https://github.com/phiflip/YOLOv8Lab/tree/main/scripts/Tracking) you can find the .yaml files for your tracker, as well as an additional script if you want to draw lines for your tracked paths.
