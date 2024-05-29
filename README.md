@@ -155,11 +155,11 @@ nc: 2
 names: ['boar','human']
 ```
 ## Predictions
-
+### CLI
 ```bash
 yolo predict model= .\training_runs\yolov8n_imgsz800\weights\best.pt source=.\test project=predictions name=yolov8n_imgsz800 conf=0.2 imgsz=800
 ```
-
+### Python environment
 ```python
 from ultralytics import YOLO
 import cv2
@@ -186,6 +186,12 @@ res_plotted = results[0].plot() # results[0]: show the first image
 res_plotted_rgb=cv2.cvtColor(res_plotted, cv2.COLOR_BGR2RGB) 
 plt.imshow(res_plotted_rgb)
 
+```
+## Predictions (quantitative evaluation on independent images)
+
+### The images must, of course, be labeled but should not have been used in training or validation.
+```bash
+yolo detect val model=path\to\weights\best.pt data=path\to\yourFile.yaml
 ```
 ## Tracking
 ```bash
