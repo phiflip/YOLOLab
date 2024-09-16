@@ -1,5 +1,6 @@
 from ultralytics import YOLO
 import cv2
+from matplotlib import pylab as plt
 
 
 # Load a model
