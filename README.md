@@ -1,5 +1,5 @@
 # YOLOv8Lab
-<img src="https://github.com/phiflip/YOLOv8Lab/blob/main/icons/YOLOv8Lab_final_icon_nobackgorund_highRes.png" width="200" alt="YOLOv8Lab main logo type">
+<img src="https://github.com/phiflip/YOLOv8Lab/blob/main/icons/YOLOv8Lab_final_icon_nobackgorund_highRes.png" width="150" alt="YOLOv8Lab main logo type">
 
 Welcome to the YOLOv8Lab repository, a dedicated platform for setting up and using YOLOv8 for object detection tasks in educational settings.
 <br />
@@ -155,11 +155,11 @@ nc: 2
 names: ['boar','human']
 ```
 ## Predictions
-
+### CLI
 ```bash
 yolo predict model= .\training_runs\yolov8n_imgsz800\weights\best.pt source=.\test project=predictions name=yolov8n_imgsz800 conf=0.2 imgsz=800
 ```
-
+### Python environment
 ```python
 from ultralytics import YOLO
 import cv2
@@ -187,8 +187,14 @@ res_plotted_rgb=cv2.cvtColor(res_plotted, cv2.COLOR_BGR2RGB)
 plt.imshow(res_plotted_rgb)
 
 ```
+## Predictions (quantitative evaluation on independent images)
+
+### The images must, of course, be labeled but should not have been used in training or validation.
+```bash
+yolo detect val model=path\to\weights\best.pt data=path\to\yourFile.yaml
+```
 ## Tracking
 ```bash
 yolo track model=path\to\weights\best.pt project=path\to\trackings\ name=yolov8n_800_botsort source="path\to\test\" tracker=botsort.yaml
 ```
-[Here](https://github.com/phiflip/YOLOv8Lab/blob/main/scripts/tracking/) you can find the .yaml files for your tracker, as well as an additional script if you want to draw lines for your tracked paths.
+[Here](https://github.com/phiflip/YOLOv8Lab/tree/main/scripts/Tracking) you can find the .yaml files for your tracker, as well as an additional script if you want to draw lines for your tracked paths.
