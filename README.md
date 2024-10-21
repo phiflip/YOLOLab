@@ -123,11 +123,11 @@ model = YOLO("yolov8n.pt")
 
 # train the model (transfer learning)
 model.train(data="path/to/yolov8/boars.yaml",
-            epochs=200,
+            epochs=20,
             imgsz=800,
             batch=8,
             project = "path/to/yolov8/training_runs/",
-            name=yolov8n_imgsz800
+            name="yolov8n_imgsz800",
             device="cpu")  # 0 for GPU (check pytorch installation hints) or "cpu"
 
 ```
