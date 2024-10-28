@@ -1,1 +1,0 @@
-yolo track model=G:\SUISAG\dataset\eberstall\runs\20231213_yolov8l_imgsz800\weights\best.pt project=G:\SUISAG\dataset\eberstall\trackings\ name=yolov8l_800_botsort source="G:\SUISAG\dataset\eberstall\test\TestVideos\NVR-2-Bucht341-Futterstation-2.mp4" tracker=botsort.yaml
