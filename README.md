@@ -89,7 +89,7 @@ C:/
 
 1. **Install labelImg for image annotation using the same activated yolov8 environment:**
    ```bash
-   pip install labelimg
+   conda install labelimg
    ```
 2. **Start the labeling software:**
    ```bash
