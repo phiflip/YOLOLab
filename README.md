@@ -188,11 +188,63 @@ plt.imshow(res_plotted_rgb)
 
 ```
 ## Predictions (quantitative evaluation on independent images)
-
+### CLI
 ### The images must, of course, be labeled but should not have been used in training or validation.
 ```bash
 yolo detect val model=path\to\weights\best.pt data=path\to\yourFile.yaml
 ```
+### Python environment
+```python
+# -*- coding: utf-8 -*-
+"""
+Evaluate a trained YOLOv8 model and generate a precision-recall curve.
+"""
+
+import os
+from ultralytics import YOLO
+import matplotlib.pyplot as plt
+
+# Optional: Set working directory if needed
+os.chdir("C:/Users/your_username/your_project/")  # Replace with your actual path or remove if unnecessary
+
+# Load YOLOv8 model
+model = YOLO("dataset/training_runs/yolov8n_1st/weights/best.pt")
+
+# Run evaluation on the test set
+metrics = model.val(
+    data="dataset/chicken.yaml",
+    imgsz=800,
+    conf=0.001,
+    iou=0.5,
+    split="test",
+    save_json=False
+)
+
+# Print evaluation metrics
+print("Evaluation results:")
+print(f"Precision (mean):      {metrics.box.mp:.4f}")
+print(f"Recall (mean):         {metrics.box.mr:.4f}")
+print(f"mAP@0.5:               {metrics.box.map50:.4f}")
+print(f"mAP@0.5:0.95:          {metrics.box.map:.4f}")
+
+# Plot precision-recall curve
+curve_data = metrics.curves_results[0]  # 'Precision-Recall(B)'
+x = curve_data[0]
+y = curve_data[1].squeeze()
+
+plt.figure(figsize=(8, 6))
+plt.plot(x, y, label='Precision-Recall')
+plt.xlabel('Recall')
+plt.ylabel('Precision')
+plt.title('YOLOv8 Precision-Recall Curve')
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.savefig("pr_curve.png")
+plt.show()
+
+```
+
 ## Tracking
 ```bash
 yolo track model=path\to\weights\best.pt project=path\to\trackings\ name=yolov8n_800_botsort source="path\to\test\" tracker=botsort.yaml
