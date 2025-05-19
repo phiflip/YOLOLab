@@ -116,7 +116,7 @@ yolo task=detect mode=train model=yolov8n.pt imgsz=800 data=path/to/boars.yaml e
 from ultralytics import YOLO
 import os
 
-# change the working directory so that the training results are saved to the correct folder.
+# change the working directory
 os.chdir("path/to/yolov8/dataset/training_runs/")
 # Load a pretrained model
 model = YOLO("yolov8n.pt")
