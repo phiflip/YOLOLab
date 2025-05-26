@@ -249,4 +249,26 @@ plt.show()
 ```bash
 yolo track model=path\to\weights\best.pt project=path\to\trackings\ name=yolov8n_800_botsort source="path\to\test\" tracker=botsort.yaml
 ```
+
+### Python environment
+
+```python
+from ultralytics import YOLO
+
+# Load trained model
+model = YOLO("path/to/weights/best.pt")
+
+# Run tracking
+results = model.track(
+    source="path/to/test/",             # Video, folder, image, webcam
+    project="path/to/trackings",        # Output folder
+    name="yolov8n_800_botsort",         # Experiment name
+    tracker="botsort.yaml",             # Tracker config
+    conf=0.2,                           # Optional: Confidence threshold
+    imgsz=800,                          # Optional: Image size
+    save=True,                          # Save results
+    show=True                           # Show results during processing
+)
+
+```
 [Here](https://github.com/phiflip/YOLOv8Lab/tree/main/scripts/Tracking) you can find the .yaml files for your tracker, as well as an additional script if you want to draw lines for your tracked paths.
