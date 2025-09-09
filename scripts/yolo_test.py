@@ -4,7 +4,7 @@ from matplotlib import pylab as plt
 
 
 # Load a model
-model = YOLO("yolov8n.pt")  # load a pretrained model (recommended for training)
+model = YOLO("yolo11n.pt")  # load a pretrained model (recommended for training)
 
 # Use the model
 results = model("https://ultralytics.com/images/bus.jpg")  # predict on an image
