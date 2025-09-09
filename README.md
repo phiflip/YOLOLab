@@ -108,7 +108,7 @@ C:/
 
 
 ```bash
-yolo task=detect mode=train model=yolon.pt imgsz=800 data=path/to/boars.yaml epochs=200 batch=8 project=/path/to/your/project/training_runs/ name=yolon_imgsz800 device="cpu"
+yolo task=detect mode=train model=yolo11n.pt imgsz=800 data=path/to/boars.yaml epochs=200 batch=8 project=/path/to/your/project/training_runs/ name=yolo11n_imgsz800 device="cpu"
 ```
 
 ### ... or using a python environment
@@ -119,7 +119,7 @@ import os
 # change the working directory
 os.chdir("path/to/yolo/dataset/training_runs/")
 # Load a pretrained model
-model = YOLO("yolon.pt")
+model = YOLO("yolo11n.pt")
 
 # train the model (transfer learning)
 model.train(data="path/to/yolo/boars.yaml",
@@ -127,17 +127,17 @@ model.train(data="path/to/yolo/boars.yaml",
             imgsz=800,
             batch=8,
             project = "path/to/yolo/training_runs/",
-            name="yolon_imgsz800",
+            name="yolo11n_imgsz800",
             device="cpu")  # 0 for GPU (check pytorch installation hints) or "cpu"
 
 ```
-- `model=yolon.pt`: Indicates the model to be used. Here, the YOLO Nano model (`yolon.pt`) is used.
+- `model=yolo11n.pt`: Indicates the model to be used. Here, the YOLO Nano model (`yolo11n.pt`) is used.
 - `imgsz=800`: Determines the size of the input images in pixels. In this case, the image size is 800x800 pixels (default: 640).
 - `data=path/to/boars.yaml`: Specifies the path to the data file that defines the training and validation data.
 - `epochs=200`: Sets the number of training epochs. Here, it is 200 epochs.
 - `batch=8`: Determines the batch size, i.e., the number of images processed simultaneously. Here, it is 8 (default 16).
 - `project=/path/to/your/project/training_runs/`: Indicates the project directory where the training runs will be saved.
-- `name=yolon_imgsz800`: Sets the name of the training run. This helps distinguish between different runs.
+- `name=yolo11n_imgsz800`: Sets the name of the training run. This helps distinguish between different runs.
 - `device="cpu"`: Specifies the CPU to be used for training. Alternatively, GPUs 0 and 1 can be used (device=(0,1)).
 
 Check [here](https://docs.ultralytics.com/modes/train/#train-settings) for additional train settings and hyperparameters
@@ -157,7 +157,7 @@ names: ['boar','human']
 ## Predictions
 ### CLI
 ```bash
-yolo predict model= .\training_runs\yolon_imgsz800\weights\best.pt source=.\test project=predictions name=yolon_imgsz800 conf=0.2 imgsz=800
+yolo predict model= .\training_runs\yolo11n_imgsz800\weights\best.pt source=.\test project=predictions name=yolo11n_imgsz800 conf=0.2 imgsz=800
 ```
 ### Python environment
 ```python
@@ -208,7 +208,7 @@ import matplotlib.pyplot as plt
 os.chdir("C:/Users/your_username/your_project/")  # Replace with your actual path or remove if unnecessary
 
 # Load YOLO model
-model = YOLO("dataset/training_runs/yolon_1st/weights/best.pt")
+model = YOLO("dataset/training_runs/yolo11n_1st/weights/best.pt")
 
 # Run evaluation on the test set
 metrics = model.val(
@@ -247,7 +247,7 @@ plt.show()
 
 ## Tracking
 ```bash
-yolo track model=path\to\weights\best.pt project=path\to\trackings\ name=yolon_800_botsort source="path\to\test\" tracker=botsort.yaml
+yolo track model=path\to\weights\best.pt project=path\to\trackings\ name=yolo11n_800_botsort source="path\to\test\" tracker=botsort.yaml
 ```
 
 ### Python environment
@@ -262,7 +262,7 @@ model = YOLO("path/to/weights/best.pt")
 results = model.track(
     source="path/to/test/",             # Video, folder, image, webcam
     project="path/to/trackings",        # Output folder
-    name="yolon_800_botsort",         # Experiment name
+    name="yolo11n_800_botsort",         # Experiment name
     tracker="botsort.yaml",             # Tracker config
     conf=0.2,                           # Optional: Confidence threshold
     imgsz=800,                          # Optional: Image size
