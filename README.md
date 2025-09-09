@@ -1,5 +1,5 @@
 # YOLOLab
-<img src="https://github.com/phiflip/YOLOLab/blob/main/icons/YOLOLab_final_icon_nobackgorund_highRes.png" width="150" alt="YOLOLab main logo type">
+<img src="https://github.com/phiflip/YOLOLab/blob/main/icons/YOLOv8Lab_final_icon_nobackgorund_highRes.png" width="150" alt="YOLOLab main logo type">
 
 Welcome to the YOLOLab repository, a dedicated platform for setting up and using YOLO for object detection tasks in educational settings.
 <br />
