@@ -87,19 +87,45 @@ C:/
 ## Labeling
 ### Additional Tools
 
-1. **Install labelImg for image annotation using the same activated yolo environment:**
+1. **Install Label Studio for image annotation using the same activated yolo environment:**
    ```bash
-   pip install labelimg
+   pip install label-studio
    ```
 2. **Start the labeling software:**
    ```bash
-   labelimg 
+   label-studio 
    ```
-3. **... in the correct folder (labelImg [path to images] [path to predefined_classes.txt file]):**
-   ```bash
-   labelimg C:\Users\UserName\yolo\labeling C:\Users\UserName\yolo\labeling\predefined_classes.txt 
-   ```   
-   <kbd><img src="https://github.com/phiflip/YOLOLab/blob/main/icons/labelimg_startup.png" width="500"  border="1px solid red" alt="LabelImg"></kbd>
+
+## 3. Start Label Studio and create an account
+
+Start Label Studio from the existing `yolo` Conda environment:
+
+```bash
+label-studio
+```
+
+Open:
+
+```text
+http://localhost:8080
+```
+
+On first start, create a local Label Studio account.
+
+### Important: use a local folder
+
+For labeling, copy the provided dataset to a local folder on `C:`.
+
+Example:
+
+```text
+C:\labeling\Lastname_Firstname\
+```
+
+Do not use network/UNC paths or OneDrive folders. `Desktop`, `Documents`, and sometimes `Downloads` may already be synchronized with OneDrive.
+
+Use a simple local path on `C:` whenever possible.
+
   
 
 ## Training
