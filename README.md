@@ -95,22 +95,13 @@ C:/
    ```bash
    label-studio 
    ```
-
-## 3. Start Label Studio and create an account
-
-Start Label Studio from the existing `yolo` Conda environment:
-
-```bash
-label-studio
-```
-
 Open:
 
 ```text
 http://localhost:8080
 ```
 
-On first start, create a local Label Studio account.
+On first start, create a Label Studio account.
 
 ### Important: use a local folder
 
@@ -123,7 +114,6 @@ C:\labeling\Lastname_Firstname\
 ```
 
 Do not use network/UNC paths or OneDrive folders. `Desktop`, `Documents`, and sometimes `Downloads` may already be synchronized with OneDrive.
-
 Use a simple local path on `C:` whenever possible.
 
   
