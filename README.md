@@ -48,8 +48,8 @@ C:/
 ```
 ### Environment Setup (via Anaconda Prompt)
 
-2. **Create a new conda environment (in the windows search bar type "Anaconda Prompt"):**
-   <kbd> <img src="https://github.com/phiflip/YOLOLab/blob/main/icons/anaconda_prompt_snippet.PNG" width="500" alt="Prompt"></kbd>
+2. **Create a new conda environment (in the Windows search bar type "Anaconda Prompt"):**
+   <kbd><img src="https://github.com/phiflip/YOLOLab/blob/main/icons/anaconda_prompt_snippet.PNG" width="500" alt="Prompt"></kbd>
 
    ```bash
    conda create --name yolo spyder=6
@@ -60,27 +60,30 @@ C:/
    conda activate yolo
    ```
 
-5. **Install Required Packages:**
+4. **Install Ultralytics:**
    ```bash
    pip install ultralytics
    ```
 
-6. **Launch Spyder within the new environment:**
+5. **Launch Spyder within the new environment:**
    ```bash
    spyder
    ```
-7. **… and check your installation by opening and running the yolo_test.py in Spyder:**
-   
-   [Download yolo_test.py](https://github.com/phiflip/YOLOLab/blob/main/scripts/yolo_test.py)
-8. **... or by typing the following commads in your Command Line Interface (CLI):**
-    #### Predict on an image
-    ```bash
-    yolo predict model=yolo11n.pt source='https://ultralytics.com/images/bus.jpg'
-    ```
 
-    #### Run a pretrained yolo object detector on your webcam
+6. **Check your installation by opening and running `yolo_test.py` in Spyder:**
+
+   [Download yolo_test.py](https://github.com/phiflip/YOLOLab/blob/main/scripts/yolo_test.py)
+
+7. **Alternatively, test YOLO26 directly from the command line:**
+
+   #### Predict on an image
    ```bash
-   yolo predict model=yolo11n.pt source=0 show=True
+   yolo predict model=yolo26n.pt source="https://ultralytics.com/images/bus.jpg"
+   ```
+
+   #### Run a pretrained YOLO26 object detector on your webcam
+   ```bash
+   yolo predict model=yolo26n.pt source=0 show=True
    ```
    
 
