@@ -52,7 +52,7 @@ C:/
    <kbd><img src="https://github.com/phiflip/YOLOLab/blob/main/icons/anaconda_prompt_snippet.PNG" width="500" alt="Prompt"></kbd>
 
    ```bash
-   conda create --name yolo spyder=6
+   conda create --name yolo python=3.12 spyder=6
    ```
 
 3. **Activate the environment:**
