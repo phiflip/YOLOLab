@@ -351,7 +351,7 @@ For tracker configuration files and additional examples, see [YOLOLab Tracking s
 
 ## References
 
-YOLOLab is based on the [Ultralytics YOLO](https://github.com/ultralytics/ultralytics) software project. The original YOLOLab documentation cited Jocher, G., Chaurasia, A., & Qiu, J. (2023), *Ultralytics YOLO* (version 8.0.0). The training and inference examples above now target **YOLO26**, not YOLOv8.
+YOLOLab is based on the [Ultralytics YOLO](https://github.com/ultralytics/ultralytics) software project. The original YOLOLab documentation cited Jocher, G., Chaurasia, A., & Qiu, J. (2023), *Ultralytics YOLO* (version 8.0.0).
 
 - [Ultralytics YOLO26 models](https://docs.ultralytics.com/models/yolo26/)
 - [Ultralytics CLI](https://docs.ultralytics.com/usage/cli/)
@@ -361,4 +361,3 @@ YOLOLab is based on the [Ultralytics YOLO](https://github.com/ultralytics/ultral
 - [Validation](https://docs.ultralytics.com/modes/val/)
 - [Tracking](https://docs.ultralytics.com/modes/track/)
 
-Documentation checked against the Ultralytics online documentation on **19 October 2026**. All command-line examples assume an activated Anaconda environment.
